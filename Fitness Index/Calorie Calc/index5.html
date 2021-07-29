@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IITJ FITNESS CENTRE/Fitness Calculators/Calorie Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" media="screen and (max-width:872px)" href="phone.css">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <nav id="navbar">
+        <div class="logo">
+            <img src="iitj1.png" alt="IITJ">
+        </div>
+              <ul class="items">
+            <li class="list" ><a href="file:///C:/Users/YASH/Documents/Visual%20Studio%202005/SE%20project/Home/index.htm"></i>Home</a></li>
+            <li class="list"><a href="#">Workout Plans</a>
+                <div class="submenu">
+                    <ul class="items">
+                        <li class="list"><a href="file:///C:/Users/YASH/Documents/Visual%20Studio%202005/SE%20project/Workout%20plans/Beginner/index2.html">Beginner</a></li>
+                        <li class="list"><a href="file:///C:/Users/YASH/Documents/Visual%20Studio%202005/SE%20project/Workout%20plans/Intermediate/index3.html">Intermediate</a></li>
+                        <li class="list"><a href="file:///C:/Users/YASH/Documents/Visual%20Studio%202005/SE%20project/Workout%20plans/Advance/index4.html">Advance</a></li>
+                    </ul>
+                </div>
+            
+            </li>
+            <li class="list"><a href="#">Fitness Calculators</a>
+                <div class="submenu">
+                    <ul class="items">
+                        <li class="list"><a href="file:///C:/Users/YASH/Documents/Visual%20Studio%202005/SE%20project/Fitness%20Index/BMI/index1.html">BMI Calculator</a></li>
+                        <li class="list"><a href="file:///C:/Users/YASH/Documents/Visual%20Studio%202005/SE%20project/Fitness%20Index/Calorie%20Calc/index5.html">Calorie Calculator</a></li>
+                    
+                    </ul>
+                </div>
+            </li>
+            
+        </ul>
+    </nav> 
+    <section class="home">
+       <div id="CAL">
+			<h1 class="primary ">Calorie Calculator</h1>
+			<p class="text" >Height</p>
+			<input type="number" placeholder="Enter height in cm." id="h" required>
+			<p class="text">Weight</p>
+			<input type="number"  placeholder="Enter weight in kg." id="w">
+            <p class="text">Age</p>
+			<input type="number" placeholder="Enter age in years." id="a">
+            <p class="text">Gender
+            <p class="gender">
+            <label for="male"><input type="radio" id="male" name="gender" value="male">Male</label>&nbsp&nbsp&nbsp
+            <label for="female"><input type="radio" id="female" name="gender" value="female">Female</label></p></p>
+            <p class="text">Activity level
+            <p class="activity">
+            <label for="light"><input type="radio" id="light" name="activity" value="light">Light</label>&nbsp&nbsp&nbsp
+            <label for="moderate"><input type="radio" id="moderate" name="activity" value="moderate">Moderate</label>&nbsp&nbsp
+            <label for="active"><input type="radio" id="active" name="activity" value="active">Active</label></p></p>
+			<p id="result"></p>
+			<button id="btn" onClick="CAL()">Calculate</button>
+
+            
+		</div>
+    </section>
+  <footer>
+        <div class="center">
+            Copyright &copy;2021 All Rights Reserved, IIT Jodhpur
+        </div>
+
+    </footer>
+    <script type="text/javascript">
+		function CAL() {
+			var h=document.getElementById('h').value;
+			var w=document.getElementById('w').value;
+            var a=document.getElementById('a').value;
+            var male=document.getElementById('male');
+            var female=document.getElementById('female');
+            var light=document.getElementById('light');
+            var moderate=document.getElementById('moderate');
+            var active=document.getElementById('active');
+            let cal=0
+            if (male.checked==true){
+                if(light.checked==true)
+                    cal=(10*(w) + 6.25*(h) - 5*(a) + 5)*1.375
+                if(moderate.checked==true)
+                    cal=(10*(w) + 6.25*(h) - 5*(a) + 5)*1.465
+                if(active.checked==true)
+                    cal=(10*(w) + 6.25*(h) - 5*(a) + 5)*1.55
+
+                }
+            else if (female.checked==true){
+                if(light.checked==true)
+                    cal=(10*(w) + 6.25*(h) - 5*(a) - 161)*1.374
+                if(moderate.checked==true)
+                    cal=(10*(w) + 6.25*(h) - 5*(a) - 161)*1.465
+                if(active.checked==true)
+                    cal=(10*(w) + 6.25*(h) - 5*(a) - 161)*1.55
+
+                }
+            if(!h || !w || !a){
+                return alert('Please fill all fields.');
+            }
+            if (h<=0 || w<=0 || a<=0){
+                return alert('Height and weight needs to be positive.');
+            }
+            if(male.checked==false && female.checked==false ){
+                return alert('Please select your gender.');
+            }
+             if(light.checked==false && moderate.checked==false && active.checked==false){
+                return alert('Please select your Activity level.');
+            }
+            if(cal<=0){
+                return alert('Please enter valid inputs.');
+            }
+			var calo=(cal.toFixed(2));
+
+			document.getElementById("result").innerHTML="Your calorie requirement is " + calo;
+		}
+</script>
+</body>
+</html>

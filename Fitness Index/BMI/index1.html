@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IITJ FITNESS CENTRE/Fitness Calculators/BMI Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" media="screen and (max-width:872px)" href="phone.css">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@500&display=swap" rel="stylesheet">
+</head>
+<script type="text/javascript">
+		function BMI() {
+			var h=document.getElementById('h').value;
+			var w=document.getElementById('w').value;
+            if(!h || !w){
+                return alert('Please fill height and weight.');
+            }
+            if (h<=0 || w<=0){
+                return alert('Height and weight needs to be positive.');
+            }
+			var bmi=w/(h/100*h/100);
+			var bmio=(bmi.toFixed(2));
+
+			document.getElementById("result").innerHTML="Your BMI is " + bmio;
+		}
+</script>
+<body>
+    <nav id="navbar">
+        <div class="logo">
+            <img src="iitj1.png" alt="IITJ">
+        </div>
+              <ul class="items">
+            <li class="list" ><a href="file:///C:/Users/YASH/Documents/Visual%20Studio%202005/SE%20project/Home/index.htm"></i>Home</a></li>
+            <li class="list"><a href="#">Workout Plans</a>
+                <div class="submenu">
+                    <ul class="items">
+                        <li class="list"><a href="file:///C:/Users/YASH/Documents/Visual%20Studio%202005/SE%20project/Workout%20plans/Beginner/index2.html">Beginner</a></li>
+                        <li class="list"><a href="file:///C:/Users/YASH/Documents/Visual%20Studio%202005/SE%20project/Workout%20plans/Intermediate/index3.html">Intermediate</a></li>
+                        <li class="list"><a href="file:///C:/Users/YASH/Documents/Visual%20Studio%202005/SE%20project/Workout%20plans/Advance/index4.html">Advance</a></li>
+                    </ul>
+                </div>
+            
+            </li>
+            <li class="list"><a href="#">Fitness Calculators</a>
+                <div class="submenu">
+                    <ul class="items">
+                        <li class="list"><a href="file:///C:/Users/YASH/Documents/Visual%20Studio%202005/SE%20project/Fitness%20Index/BMI/index1.html">BMI Calculator</a></li>
+                        <li class="list"><a href="file:///C:/Users/YASH/Documents/Visual%20Studio%202005/SE%20project/Fitness%20Index/Calorie%20Calc/index5.html">Calorie Calculator</a></li>
+                    
+                    </ul>
+                </div>
+            </li>
+            
+        </ul>
+    </nav> 
+    <section class="home">
+       <div id="bmi">
+			<h1 class="primary ">BMI Calculator</h1>
+			<p class="text">Height</p>
+			<input type="number" id="h" placeholder="Enter height in cm." required>
+			<p class="text">Weight</p>
+			<input type="number" id="w" placeholder="Enter weight in kg." required>
+			<p id="result"></p>
+			<button id="btn" onClick="BMI()">Calculate</button>
+			
+		</div>
+    </section>
+  <footer>
+        <div class="center">
+            Copyright &copy;2021 All Rights Reserved, IIT Jodhpur
+        </div>
+
+    </footer>
+</body>
+</html>
