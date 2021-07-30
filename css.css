@@ -1,9 +1,9 @@
-*{
+* {
     padding: 0;
     margin: 0;
-    
 }
-#navbar::before{
+
+#navbar::before {
     content: "";
     background: black;
     position: absolute;
@@ -14,33 +14,36 @@
     z-index: -2;
     opacity: 0.8;
 }
-#navbar{
+
+#navbar {
     display: flex;
     position: relative;
     height: 60px;
 }
-.logo img{
+
+.logo img {
     height: 40px;
     width: 40px;
     margin: 0px 9px;
     padding: 0px 6px;
-    
-} 
-.logo{
+}
+
+.logo {
     margin: 3px;
     padding: 5px;
 }
-.items{display: flex;
+
+.items {
+    display: flex;
     align-items: center;
-
     justify-content: center;
-
 }
-.list{ 
+
+.list {
     list-style: none;
-
 }
-.list a{
+
+.list a {
     text-decoration: none;
     padding: 3px 30px;
     margin: 2px 4px;
@@ -49,56 +52,61 @@
 }
 
 .list a:hover {
-    color:black;
+    color: black;
     background-color: white;
 }
 
-.submenu{
+.submenu {
     display: none;
     position: absolute;
 }
-.list:hover .submenu{
+
+.list:hover .submenu {
     display: block;
     margin-top: 4px;
     position: absolute;
-    background-image: linear-gradient(120deg,#5d728b, #d7d7d8);
+    background-image: linear-gradient(120deg, #5d728b, #d7d7d8);
     border-radius: 15px;
     z-index: -1;
     opacity: 0.8;
-
 }
-.list:hover .submenu ul{
+
+.list:hover .submenu ul {
     display: block;
     margin: 10px;
 }
-.list:hover .submenu ul a{
+
+.list:hover .submenu ul a {
     display: block;
 }
-.list:hover .submenu ul li{
+
+.list:hover .submenu ul li {
     padding: 6px 0px;
     background: transparent;
     text-align: left;
 }
-.list:hover .submenu,  .submenu:hover {
+
+.list:hover .submenu,
+.submenu:hover {
     display: block;
     z-index: 3;
 }
 
 
-
 /* home */
-.home::before{
+
+.home::before {
     content: "";
-    background: url("bg1.jpg") no-repeat center center/cover;
+    background: url("Home/bg1.jpg") no-repeat center center/cover;
     position: absolute;
     top: 0;
     height: 30rem;
     width: 100%;
     z-index: -2;
     opacity: 0.8;
-
 }
-.home{
+
+.home {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -106,29 +114,29 @@
     height: 26rem;
     color: white;
     text-align: center;
-
 }
-.home h1{
+
+.home h1 {
     color: white;
-    text-shadow: 2px 2px rgb(0 0 0 );
-
+    text-shadow: 2px 2px rgb(0 0 0);
 }
 
-ul li,p,li a{
+ul li,
+p,
+li a {
     font-family: 'Libre Franklin', sans-serif;
     font-size: 1.2rem;
 }
 
-.bton:hover{
+.bton:hover {
     color: white;
-    background:#3e3d3d;
-    
+    background: #3e3d3d;
 }
+
+
 /* services */
 
-.container{
-    
-    
+.container {
     /* background-color: #9d9a9e; */
     /* background-image: linear-gradient(120deg,#222f3e, #c8d6e5); */
     display: flex;
@@ -138,25 +146,24 @@ ul li,p,li a{
     flex-direction: row;
     flex-wrap: wrap;
 }
-.container img{
-    width: 150px;
 
+.container img {
+    width: 150px;
 }
-.service{
-    background-image: linear-gradient(
-120deg
-,#828a86, #ffffff);
+
+.service {
+    background-image: linear-gradient( 120deg, #828a86, #ffffff);
     z-index: -2;
 }
 
-.service h1{
+.service h1 {
     text-align: center;
     font-family: fantasy;
     color: white;
-    text-shadow: 3px 2px rgb(0 0 0 );
-
+    text-shadow: 3px 2px rgb(0 0 0);
 }
-.box{
+
+.box {
     border: none;
     display: flex;
     flex-basis: 40%;
@@ -166,30 +173,27 @@ ul li,p,li a{
     border-radius: 18px;
     padding: 3px;
     margin: 36px;
-    background:beige;
+    background: beige;
     box-shadow: 1px 1px 20px #807c73;
-    height:auto;
-    
+    height: auto;
 }
-.box ul li{
+
+.box ul li {
     padding: 2px;
     margin: 2px;
     font-size: 15px;
-   
 }
-.box ul li a{
+
+.box ul li a {
     text-decoration: none;
 }
 
-
-
-
-.box:hover{
+.box:hover {
     transform: translateY(-20px);
-    transition :0.5s;
-
+    transition: 0.5s;
 }
-.box  p{
+
+.box p {
     padding: 2px;
 }
 
@@ -198,15 +202,14 @@ legend {
     font-size: 60px;
     font-weight: 600;
     text-align: center;
-    
-
-
 }
-legend a{
+
+legend a {
     text-decoration: none;
     color: black;
 }
-.box h2{
+
+.box h2 {
     /* position: relative;
     top:-60px;
     right: 20px;
@@ -217,65 +220,73 @@ legend a{
     transition: 0.5s;
 }
 
-
-#contactus::before{
+#contactus::before {
     content: "";
     position: absolute;
-    background: url("contact.jpg") no-repeat center center/cover;
+    background: url("Home/contact.jpg") no-repeat center center/cover;
     width: 100%;
     height: 33rem;
     z-index: -1;
     opacity: 0.4;
 }
-#contactus h1{
+
+#contactus h1 {
     font-family: fantasy;
     color: rgb(62 61 61);
     text-shadow: 3px 2px rgb(255 255 255);
-
 }
 
-.contact{
+.contact {
     display: flex;
     align-items: center;
     justify-content: center;
     padding-bottom: 40px;
 }
 
-form{
+form {
     display: flex;
     flex-direction: column;
     justify-content: center;
     width: 45%;
-   
 }
-form label{
+
+form label {
     font-size: 1.4rem;
 }
-form input,form textarea{
+
+form input,
+form textarea {
     border-radius: 8px;
     padding: 4px;
 }
-.center{
+
+.center {
     text-align: center;
 }
+
+
 /* #footer */
 
-footer{
+footer {
     display: block;
 }
-footer{
-    background:#3e3d3d;
+
+footer {
+    background: #3e3d3d;
     color: white;
 }
+
+
 /* utilities */
-.primary{
+
+.primary {
     font-size: 3.5rem;
     font-family: 'Ubuntu', sans-serif;
     padding: 3px;
     text-align: center;
-    
 }
-.bton{
+
+.bton {
     width: 50%;
     border: 2px solid grey;
     border-radius: 25px;
